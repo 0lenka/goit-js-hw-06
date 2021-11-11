@@ -4,6 +4,11 @@ console.log(inputName)
 console.log(output)
 inputName.addEventListener("input", onInputChange)
 function onInputChange(event) {
-    output.textContent = event.currentTarget.value;
+    if (inputName.value === "") {
+        output.textContent = "Anonymus"
+    }
+    else {
+        output.textContent = event.currentTarget.value;
+    }    
     
 }
